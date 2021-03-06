@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000f12;
+  overflow: hidden;
+}
+
+section .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+}
+
+section .content span {
+  font-family: "DotGothic16", sans-serif;
+  color: #00c0ff;
+  font-weight: 800;
+}
+
+section .content .line {
+  position: absolute;
+  height: 100px;
+  width: 5px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 15px;
+  background: #000f12;
+  box-shadow: 0 0 10px #00c0ff, 0 0 20px #00c0ff, 0 0 40px #00c0ff,
+    0 0 60px #00c0ff, 0 0 80px #00c0ff, 0 0 120px #00bfffc7;
+
+  animation: animate-line 5s linear infinite;
+}
+
+section .content .bar {
+  position: absolute;
+  height: 100px;
+  width: 1000px;
+  top: 0;
+  left: 0;
+  background: #000f12;
+  animation: animate-bar 10s linear infinite;
+}
+
+@keyframes animate-line {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animate-bar {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  5% {
+    transform: translateX(-900px);
+  }
+
+  16% {
+    transform: translateX(-790px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(500px);
+  }
+}
