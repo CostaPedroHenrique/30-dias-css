@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #394beba6, #b700ff);
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  width: 1150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 150px;
+  height: 210px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000f30;
+  clip-path: circle(90px at center 0);
+  text-align: center;
+}
+
+.container .card:hover .circle + .content a,
+.container .card:hover .circle {
+  animation: animate;
+  animation-delay: 5s;
+  background: linear-gradient(45deg, #394beba6, #b700ff);
+  color: #fff;
+}
+
+.container .card .circle h2 {
+  color: #fff;
+  font-size: 1em;
+  padding: 30px 0;
+  transition: 0.5s;
+}
+
+.container .card:hover .circle h2 {
+  padding: 15px 0;
+}
+
+.container .card .content {
+  position: absolute;
+  bottom: 10px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+.container .card .content img {
+  width: 0em;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  transition: 0.5s;
+}
+.container .card:hover .content img {
+  width: 3em;
+}
+
+.container .card .content p {
+  font-size: 0.5em;
+  color: #666;
+}
+
+.container .card .content a {
+  position: relative;
+  font-size: 0.5em;
+  display: inline-block;
+  padding: 4px 8px;
+  background: #000f30;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  margin-top: 20px;
+}
