@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(#f2761e, #ef4921);
+}
+
+.box {
+  display: flex;
+  animation: moveeye alternate infinite 400ms 40ms ease-in-out;
+}
+.box .eye {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: block;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 50%;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 15px #f2761e,
+    inset 0 0 25px #f2761e;
+
+  transform: translateX(0px) translateY(0px) skewX(0deg) skewY(2deg);
+}
+
+.box .eye:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #2196f3;
+  box-sizing: border-box;
+}
+
+.box .eye:after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 50%;
+  left: 30%;
+  top: 40%;
+}
+
+.shadow:nth-child(1n) {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  width: 130px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.09);
+  animation: moveeye alternate infinite 400ms 40ms ease-in-out;
+}
+.shadow:nth-child(2n) {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 130px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.09);
+  animation: moveeye alternate infinite 400ms 40ms ease-in-out;
+}
+
+@keyframes moveeye {
+  to {
+    transform: scaleX(1.03) scaleY(0.97);
+  }
+}

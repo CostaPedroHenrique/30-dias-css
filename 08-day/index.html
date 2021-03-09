@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 dias de css</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="loader">
+        <div></div>
+        <span class="hh"></span>
+        <span class="mm"></span>
+        <span class="ss"></span>
+      </div>
+    </section>
+    <script>
+      const hr = document.querySelector(".hh");
+      const min = document.querySelector(".mm");
+      const sec = document.querySelector(".ss");
+
+      setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * 6;
+        let ss = day.getSeconds() * 6;
+        console.log();
+        hr.style.transform = `rotate(${hh}deg)`;
+        min.style.transform = `rotate(${mm}deg)`;
+        sec.style.transform = `rotate(${ss}deg)`;
+      });
+    </script>
+  </body>
+</html>
