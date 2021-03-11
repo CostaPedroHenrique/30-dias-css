@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 dias de css</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="clock">
+      <h2>Hora atual</h2>
+      <div id="time">
+        <div><span id="hh">00</span><span>Horas</span></div>
+        <div><span id="mm">00</span><span>Minutos</span></div>
+        <div><span id="ss">00</span><span>Segundos</span></div>
+      </div>
+    </div>
+
+    <script>
+      function clock() {
+        const hr = document.getElementById("hh");
+        const min = document.getElementById("mm");
+        const sec = document.getElementById("ss");
+        let day = new Date();
+        let hh = day.getHours();
+        let mm = day.getMinutes();
+        let ss = day.getSeconds();
+        console.log();
+        hr.innerHTML = hh;
+        min.innerHTML = mm;
+        sec.innerHTML = ss;
+      }
+
+      setInterval(clock, 1000);
+    </script>
+  </body>
+</html>
