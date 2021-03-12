@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 dias de css</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="circle">
+      <img src="./assets/agua.jpg" alt="" />
+    </div>
+
+    <script>
+      const circle = document.querySelector(".circle");
+      circle.addEventListener("click", function (e) {
+        circle.style.animation = "";
+        setTimeout(() => {
+          circle.style.animation = "2s animate linear normal";
+        }, 5);
+      });
+    </script>
+  </body>
+</html>

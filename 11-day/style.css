@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border-radius: 50%;
+  border: 10px solid rgba(31, 109, 255);
+}
+
+.circle img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 10px rgba(31, 109, 255, 0);
+  }
+
+  10% {
+    box-shadow: 0 0 0 10px rgba(31, 109, 255, 0.5);
+  }
+
+  40% {
+    box-shadow: 0 0 0 10px rgba(31, 109, 255, 0.5),
+      0 0 0 20px rgba(31, 109, 255, 0.2);
+  }
+  60% {
+    box-shadow: 0 0 0 10px rgba(31, 109, 255, 0.5),
+      0 0 0 20px rgba(31, 109, 255, 0.2), 0 0 0 30px rgba(31, 109, 255, 0.08);
+  }
+  80% {
+    box-shadow: 0 0 0 10px rgba(31, 109, 255, 0.5),
+      0 0 0 20px rgba(31, 109, 255, 0.2), 0 0 0 30px rgba(31, 109, 255, 0.08),
+      0 0 0 40px rgba(31, 109, 255, 0.05);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(31, 109, 255, 0.5),
+      0 0 0 20px rgba(31, 109, 255, 0.2), 0 0 0 30px rgba(31, 109, 255, 0.08),
+      0 0 0 40px rgba(31, 109, 255, 0.05), 0 0 0 50px rgba(31, 109, 255, 0.02);
+  }
+}
