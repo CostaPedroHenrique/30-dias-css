@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+}
+
+.calendar {
+  position: relative;
+  width: 200px;
+  background: #fff;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0004);
+}
+
+.calendar #monthName {
+  position: relative;
+  padding: 5px 10px;
+  background: #127fd6;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.calendar #dayName {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #999;
+  font-weight: 300;
+}
+
+.calendar #dayNumber {
+  line-height: 1em;
+  font-size: 80px;
+  color: #333;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.calendar #year {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #999;
+  font-weight: 500;
+}
+
+.calendar #monthName:hover {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.calendar #dayNumber:hover {
+  line-height: 1em;
+  font-size: 90px;
+  color: #333;
+  font-weight: 800;
+}
