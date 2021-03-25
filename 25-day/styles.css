@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eeeaf0;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(rgb(138, 5, 190), #f0f);
+  border-radius: 50%;
+}
+
+.container {
+  position: relative;
+  padding: 70px 40px;
+  background: #eeeaf0;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+  color: #111;
+  margin-bottom: 45px;
+  line-height: 1em;
+  font-weight: 500;
+  padding-left: 10px;
+  border-left: 5px solid rgb(138, 5, 190);
+  border-top: 5px solid rgb(138, 5, 190);
+  width: 170px;
+}
+.container .inputBox {
+  position: relative;
+  width: 300px;
+  height: 46px;
+  margin-bottom: 35px;
+}
+
+.container .inputBox:last-child {
+  margin-bottom: 0;
+}
+
+.container .inputBox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid rgb(138, 5, 190);
+  background: transparent;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+}
+
+.container .inputBox span {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  color: #111;
+  font-weight: 300;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.container .inputBox input:focus ~ span,
+.container .inputBox input:valid ~ span,
+.container .inputBox input:not(:placeholder-shown) ~ span {
+  transform: translateY(-13px);
+  background: #eeeaf0;
+  padding: 3px;
+  font-size: 12px;
+  color: rgb(138, 5, 190);
+}
+
+.container .inputBox input[type="submit"] {
+  background: rgb(138, 5, 190);
+  color: #eeeaf0;
+  border: none;
+  cursor: pointer;
+}
+
+.container .inputBox input[type="submit"]:hover {
+  background: linear-gradient(rgb(138, 5, 190), #f0f);
+  transition: 0.5s;
+}
