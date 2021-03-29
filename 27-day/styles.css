@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eeeaf0;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(rgb(138, 5, 190), #f0f);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 800;
+  z-index: 2;
+}
+
+#rangeValue:after {
+  content: "%";
+}
+
+#fillRangeValue {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(rgb(138, 5, 190), #f0f);
+  z-index: 1;
+}
+
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  outline: none;
+  width: 400px;
+  z-index: 2;
+  border: none;
+  height: 15px;
+  border-radius: 15px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(138, 5, 210);
+}

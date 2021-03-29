@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 dias de css</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="percent">
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle id="percentBar" cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <h2 id="numberPercent"></h2>
+        </div>
+      </div>
+      <h2 class="text">30 dias de CSS</h2>
+      <input
+        type="range"
+        class="range"
+        name="range"
+        value="0"
+        min="0"
+        max="100"
+        onmousemove="rangeSlide(this.value)"
+        onchange="rangeSlide(this.value)"
+      />
+    </div>
+
+    <script>
+      function rangeSlide(value) {
+        document.getElementById("numberPercent").innerHTML =
+          value + "<span>%</span>";
+        document.getElementById("percentBar").style.strokeDashoffset =
+          440 - (440 * value) / 100;
+      }
+    </script>
+  </body>
+</html>

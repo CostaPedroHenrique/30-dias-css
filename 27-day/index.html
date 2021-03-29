@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 dias de css</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <h2 id="rangeValue"></h2>
+      <div id="fillRangeValue"></div>
+      <input
+        type="range"
+        class="range"
+        name="range"
+        value="0"
+        min="0"
+        max="100"
+        onmousemove="rangeSlide(this.value)"
+        onchange="rangeSlide(this.value)"
+      />
+    </div>
+    <script>
+      function rangeSlide(value) {
+        document.getElementById("rangeValue").innerHTML = value;
+        document.getElementById("fillRangeValue").style.width = value + "%";
+      }
+    </script>
+  </body>
+</html>
