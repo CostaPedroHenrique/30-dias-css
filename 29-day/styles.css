@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eeeaf0;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(rgb(138, 5, 190), #f0f);
+  border-radius: 50%;
+}
+
+.list {
+  padding: 30px 75px 10px 30px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 30px 60px rgb(138, 5, 190, 0.4);
+  border-top: 20px solid rgb(138, 5, 190);
+}
+
+.list h2 {
+  color: rgb(138, 5, 190);
+  font-size: 30px;
+  padding: 10px 0;
+  margin-left: 10px;
+  border-bottom: 4px solid rgb(204, 77, 255);
+}
+
+.list label {
+  position: relative;
+  display: block;
+  margin: 40px 0;
+  color: rgb(138, 5, 190);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.list input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
+.list i {
+  position: absolute;
+  top: 2px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgb(204, 77, 255);
+}
+
+.list input[type="checkbox"]:checked ~ i {
+  top: 1px;
+  border-top: none;
+  border-right: none;
+  height: 15px;
+  width: 25px;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.list span {
+  position: relative;
+  left: 40px;
+  transition: 0.5s;
+}
+
+.list span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgb(204, 77, 255);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.list input[type="checkbox"]:checked ~ span:before {
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.list input[type="checkbox"]:checked ~ span {
+  color: rgba(205, 77, 255, 0.461);
+}
