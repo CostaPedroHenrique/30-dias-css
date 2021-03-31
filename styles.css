@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eeeaf0;
+  overflow-y: scroll;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  bottom: -40%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(rgb(138, 5, 190), #f0f);
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(138, 5, 190);
+  border-radius: 10px;
+}
+
+.content {
+  position: relative;
+  width: 1240px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.content::after {
+  content: "30 dias de CSS";
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: rgb(138, 5, 190);
+  width: 160px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animate-begin 4s linear;
+}
+.content a {
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  color: rgb(138, 5, 190);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.2);
+  font-size: 26px;
+  font-weight: 700;
+  animation: animate 3.5s ease-in-out;
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+.content a:hover {
+  background: rgb(138, 5, 190);
+  color: #fff;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes animate-begin {
+  0% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+
+  90% {
+    transform: translateX(0%);
+  }
+  95% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
